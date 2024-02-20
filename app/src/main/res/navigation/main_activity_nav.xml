@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/homepageFragment">
+
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.navigationassignments.HomepageFragment"
+        android:label="fragment_homepage"
+        tools:layout="@layout/fragment_homepage" >
+        <action
+            android:id="@+id/aTransition"
+            app:destination="@id/aFragment" />
+        <action
+            android:id="@+id/xTransition"
+            app:destination="@id/xFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aFragment"
+        android:name="com.example.navigationassignments.AFragment"
+        android:label="fragment_a"
+        tools:layout="@layout/fragment_a" >
+        <action
+            android:id="@+id/bTransition"
+            app:destination="@id/bFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/xFragment"
+        android:name="com.example.navigationassignments.XFragment"
+        android:label="fragment_x"
+        tools:layout="@layout/fragment_x" >
+        <action
+            android:id="@+id/yTransition"
+            app:destination="@id/yFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/yFragment"
+        android:name="com.example.navigationassignments.YFragment"
+        android:label="fragment_y"
+        tools:layout="@layout/fragment_y" >
+        <action
+            android:id="@+id/homepageTransition"
+            app:destination="@id/homepageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bFragment"
+        android:name="com.example.navigationassignments.BFragment"
+        android:label="fragment_b"
+        tools:layout="@layout/fragment_b" >
+        <action
+            android:id="@+id/bToYTransition"
+            app:destination="@id/yFragment" />
+    </fragment>
+</navigation>
